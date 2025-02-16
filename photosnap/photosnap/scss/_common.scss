@@ -1,0 +1,433 @@
+//------------logo-------------------
+
+.logo {
+
+    // .logo__image
+
+    &__item {
+        aspect-ratio: 170 / 16;
+    }
+
+    // .logo__link
+
+    &__link {}
+
+    // .logo__img
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+//-----------list-nav----------------------------------------
+
+.list-nav {
+    color: $darkColor;
+    display: flex;
+    justify-content: space-between;
+    column-gap: toRem(37);
+    row-gap: toRem(15);
+    flex-wrap: wrap;
+    align-items: center;
+
+    &--light {
+        color: $lightColor;
+    }
+
+    &--footer {
+        column-gap: toRem(26);
+    }
+
+    // .list-nav__item
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        // .list-nav__item--margin
+        &--margin {
+            @media(max-width: toEm(670)) {
+                text-align: center;
+                margin-bottom: toRem(20);
+            }
+        }
+
+        // .list-nav__item--footer
+        &--footer {
+            min-height: toRem(16);
+
+            @media(max-width: toEm(670)) {
+                margin-bottom: 0;
+            }
+
+            @media(min-width: toEm(768.02)) {
+                align-items: center;
+            }
+        }
+    }
+
+    // .list-nav__link
+
+    &__link {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: toRem(2);
+        transition: opacity 0.3s;
+        line-height: 1;
+
+        @media(any-hover: hover) {
+            &:hover {
+                opacity: 0.3;
+            }
+        }
+    }
+}
+
+//--------------action-header-----------------------------------
+
+.action-header {
+    flex-basis: toRem(170);
+    display: flex;
+    justify-content: flex-end;
+    column-gap: toRem(15);
+    flex-shrink: 0;
+
+    @media(max-width: toEm(750)) {
+        flex-basis: toRem(159);
+    }
+
+    @media(max-width: toEm(670)) {
+        flex-basis: toRem(20);
+    }
+
+    // .action-header__button
+
+    &__button {
+
+        @media(max-width: toEm(670)) {
+            min-width: toRem(310);
+        }
+    }
+}
+
+//----------button----------------------------------------
+
+.button {
+    font-weight: 700;
+    letter-spacing: toRem(2);
+    text-transform: uppercase;
+    background-color: $darkColor;
+    padding: toRem(12) toRem(24);
+    transition: background-color 0.3s, color 0.3s;
+
+    @media(any-hover: hover) {
+        &:hover {
+            background-color: $hoverButtonBacground;
+            color: $darkColor;
+        }
+    }
+}
+
+//-------------block-links----------------------------------------
+
+.block-links {
+    display: flex;
+    gap: toRem(18);
+
+    // .block-links__item
+    &__item {
+        letter-spacing: 2px;
+        font-size: toRem(12);
+        text-transform: uppercase;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.3s;
+        color: $darkColor;
+
+        @media(any-hover: hover) {
+            &:hover {
+                border-bottom: 1px solid $darkColor;
+            }
+        }
+
+        &--dark {
+            color: $lightColor;
+
+            @media(any-hover: hover) {
+                &:hover {
+                    border-bottom: 1px solid $lightColor;
+                }
+            }
+        }
+    }
+
+    // .block-links__img-arrow
+
+    &__img-arrow {
+        width: toRem(42);
+        height: toRem(12);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s;
+            will-change: transform;
+
+            @media(any-hover: hover) {
+                &:hover {
+                    transform: translate(toRem(10));
+                }
+            }
+        }
+    }
+}
+
+//----------card-------------------------------------------
+
+.card {
+    @media(any-hover: hover) {
+        &:hover .card__link {
+            transform: translateY(toRem(-30));
+        }
+    }
+
+    //.card__link
+    &__link {
+        padding: toRem(40);
+        position: relative;
+        z-index: 0;
+        aspect-ratio: 0.72 / 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        transition: transform 0.3s;
+        will-change: transform;
+
+        @media(max-width: toEm(400)) {
+            aspect-ratio: 1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: $linearGradientCard;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 70%;
+            z-index: -1;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $backgroundCardColor;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+        }
+    }
+
+    //.card__img
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+    }
+
+    // .card__title
+
+    &__title {
+        color: $lightColor;
+        font-size: toRem(18);
+        line-height: 1.39;
+        /* 25/18 */
+        text-transform: capitalize;
+
+        &:not(:last-child) {
+            margin-bottom: toRem(4);
+        }
+    }
+
+    // .card__subtitle
+
+    &__subtitle {
+        color: $lightColor;
+        font-size: toRem(13);
+        font-weight: 400;
+
+        &:not(:last-child) {
+            padding-bottom: toRem(16);
+            margin-bottom: toRem(20);
+            border-bottom: 1px solid $borderColorLight;
+        }
+    }
+
+    // .card__items
+
+    &__items {
+        display: flex;
+        gap: toRem(15);
+        justify-content: space-between;
+    }
+
+    //.card__item
+    &__item {
+        letter-spacing: 2px;
+        font-size: toRem(12);
+        text-transform: uppercase;
+        color: $lightColor;
+    }
+
+    //.card__arrow
+    &__arrow {
+        width: toRem(42);
+        height: toRem(12);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+//-----------advantages------------------------------------------
+
+.advantages {
+    padding-block: clamp(5rem, 2.615rem + 10.18vw, 7.5rem);
+    text-align: center;
+
+    @media(min-width: toEm(768)) {
+        display: flex;
+        align-items: center;
+        gap: toRem(30);
+        text-align: center;
+    }
+
+    // .advantages__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media(max-width: toEm(768)) {
+            max-width: toRem(467);
+            margin: 0 auto;
+
+            &:not(:last-child) {
+                margin-bottom: clamp(3.5rem, 2.069rem + 6.11vw, 5rem);
+            }
+        }
+    }
+
+    // .advantages__img
+
+    &__img {
+        width: toRem(72);
+        height: toRem(72);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:not(:last-child) {
+            margin-bottom: toRem(48);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    // .advantages__title
+
+    &__title {
+        font-size: toRem(18);
+        line-height: 1.39;
+        /* 25/18 */
+
+        &:not(:last-child) {
+            margin-bottom: toRem(16);
+        }
+    }
+
+    // .advantages__text
+
+    &__text {
+        font-size: toRem(15);
+        font-weight: 400;
+        line-height: 1.67;
+        /* 25/15 */
+        opacity: 0.6;
+    }
+}
+
+//-----------social---------------------------------------
+
+.social {
+
+    // .social__list
+
+    &__list {
+        display: flex;
+        gap: toRem(13);
+    }
+
+    // .social__item
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    // .social__link
+
+    &__link {
+        width: toRem(20);
+        height: toRem(20);
+        position: relative;
+
+        img {
+            transition: opacity 0.3s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        &:hover .social__color-icon {
+            opacity: 1;
+        }
+
+        &:hover .social__icon {
+            opacity: 0;
+        }
+    }
+
+    // .social__icon
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    // .social__color-icon
+
+    &__color-icon {
+        opacity: 0;
+    }
+}
