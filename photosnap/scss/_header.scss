@@ -1,0 +1,101 @@
+.header {
+    // .header--position
+
+    &--position {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: toRem(72);
+        background-color: $lightColor;
+        z-index: 10;
+    }
+
+    // .header__container
+
+    &__container {
+        padding-block: toRem(16);
+        min-height: toRem(72);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: toRem(15);
+        position: relative;
+
+        @media(max-width:toEm(670)) {
+            &::before {
+                content: '';
+                position: fixed;
+                width: 100vw;
+                height: 100svh;
+                top: 0;
+                right: -100%;
+                transition: right 0.3s;
+                z-index: -1;
+                background-color: $darkColor;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    // .header__logo
+
+    &__logo {
+        position: relative;
+        z-index: 5;
+    }
+
+    // .header__nav
+
+    &__nav {
+
+        @media(max-width:toEm(670)) {
+            position: fixed;
+            right: -100%;
+            top: 0;
+            width: 100vw;
+            height: toRem(305);
+            display: flex;
+            flex-direction: column;
+            padding-top: toRem(104);
+            background-color: $lightColor;
+            justify-content: flex-start;
+            align-items: center;
+            letter-spacing: toRem(2.5);
+            font-size: toRem(15);
+            transition: right 0.3s;
+            overflow: auto;
+            z-index: 3;
+
+            &::after {
+                content: '';
+                position: fixed;
+                width: 100vw;
+                min-height: toRem(72);
+                top: 0;
+                right: -100%;
+                z-index: 3;
+                background-color: $lightColor;
+            }
+
+        }
+    }
+
+    // .header__list
+
+    &__list {
+
+        @media(max-width: toEm(670)) {
+            flex-direction: column;
+            border-bottom: 1px solid $borderColorDark;
+            max-width: toRem(310);
+            width: 100%;
+            margin-bottom: toRem(20);
+            gap: 0;
+        }
+    }
+
+    // .header__action
+
+    &__action {}
+}
