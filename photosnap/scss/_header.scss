@@ -57,7 +57,7 @@
             height: toRem(305);
             display: flex;
             flex-direction: column;
-            padding-top: toRem(104);
+            padding-block: toRem(104) toRem(30);
             background-color: $lightColor;
             justify-content: flex-start;
             align-items: center;
@@ -66,6 +66,7 @@
             transition: right 0.3s;
             overflow: auto;
             z-index: 3;
+            max-height: 100%;
 
             &::after {
                 content: '';
