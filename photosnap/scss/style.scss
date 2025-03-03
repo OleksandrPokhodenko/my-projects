@@ -113,7 +113,7 @@ body {
         position: relative;
 
         @media(min-width: toEm(992)) {
-            block-size: calc(100svh - toRem(72));
+            min-block-size: calc(100svh - toRem(72));
         }
     }
 
