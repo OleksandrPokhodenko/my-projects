@@ -552,19 +552,19 @@ body {
   -o-object-fit: contain;
   object-fit: contain
 }
-.block-contacts {
+.block-contacts__list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem
 }
 .block-contacts__link {
   color: #555c68;
-  font-family: Inter,sans-serif;
   font-size: .875rem;
   font-weight: 500;
   display: flex;
   gap: .75rem;
-  transition: color .3s
+  transition: color .3s;
+  font-style: normal
 }
 .block-contacts__link::before {
   color: #101c26;
@@ -653,11 +653,11 @@ body {
   color: #f5f5f5;
   line-height: 1.5
 }
-.footer__adress {
+.footer__address {
   display: flex;
   gap: 1rem
 }
-.footer__link-adress {
+.footer__link-address {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1204,14 +1204,17 @@ body {
   flex-shrink: 0;
   width: 100%
 }
-.slide-card__figure {
+.slide-card__inner {
   border-radius: 10px;
   text-align: center;
   padding: 2rem 3.75rem;
   background-color: #fff
 }
-.swiper-slide-active .slide-card__figure {
+.swiper-slide-active .slide-card__inner {
   box-shadow: 0 25px 32px 0 rgba(67,67,67,.14)
+}
+.slide-card__figure:not(:last-child) {
+  margin-bottom: .25rem
 }
 .slide-card__img {
   overflow: hidden;
@@ -1228,9 +1231,6 @@ body {
 }
 .slide-card__img:not(:last-child) {
   margin-bottom: 1rem
-}
-.slide-card__figcaption:not(:last-child) {
-  margin-bottom: .25rem
 }
 .slide-card__name {
   color: #000;
@@ -1764,7 +1764,7 @@ body {
   }
 }
 @media (max-width:28.12375em) {
-  .slide-card__figure {
+  .slide-card__inner {
     padding: 1.25rem 1.25rem
   }
 }
@@ -1931,7 +1931,7 @@ body {
     color: #fff;
     border-bottom: .0625rem solid #fff
   }
-  .footer__link-adress:hover {
+  .footer__link-address:hover {
     background-color: #cd681b
   }
   .menu-footer__link:hover {
