@@ -1,0 +1,264 @@
+.logo {
+    // .logo__item
+
+    &__item {
+    }
+}
+
+//================================================================
+
+.button {
+    @include adaptiveValue("padding-block", 17, 8, 0, 1400, 768);
+    padding-inline: toRem(5);
+    border: toRem(1) solid transparent;
+    color: $whiteColor;
+    font-size: toRem(17);
+    font-weight: 450;
+    background-color: $fontColor;
+    border-radius: toRem(5);
+    flex-shrink: 0;
+    @include adaptiveValue("min-width", 197, 140, 0, 1400, 768);
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: toEm(450)) {
+        min-width: 100%;
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $yellowColor-4;
+            color: $darkColor;
+        }
+    }
+    // .button--transparent
+    &--transparent {
+        background-color: transparent;
+        border: toRem(1) solid $fontColor;
+        color: $fontColor;
+    }
+}
+
+//===================================================================
+
+.block-header {
+    & > * {
+        &:not(:last-child) {
+            margin-bottom: toRem(30);
+        }
+    }
+    // .block-header__title
+
+    &__title {
+        @include adaptiveValue("font-size", 65, 30);
+        line-height: 1.25;
+    }
+
+    // .block-header__text
+
+    &__text {
+        font-size: toRem(20);
+        line-height: 1.25;
+        // .block-header__text--grey
+        &--grey {
+            color: $greyColor;
+        }
+        // .block-header__text--center
+        &--center {
+            max-width: toRem(720);
+            margin-inline: auto;
+        }
+    }
+
+    // .block-header--center
+
+    &--center {
+        text-align: center;
+    }
+}
+
+//===================================================================
+
+.decor {
+    position: absolute;
+    width: toRem(158);
+    aspect-ratio: 158 / 184;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+//===================================================================
+
+.spollers {
+    // .spollers__item
+
+    &__item {
+        &.active {
+            box-shadow: 0 toRem(20) toRem(95) 0 rgba(201, 203, 204, 0.3);
+            border-radius: toRem(10);
+        }
+    }
+
+    // .spollers__title
+
+    &__title {
+        @include adaptiveValue("padding-left", 30, 0);
+        @include adaptiveValue("padding-right", 40, 0);
+        padding-block: toRem(40) toRem(20);
+        font-size: toRem(18);
+        font-weight: 700;
+        line-height: 1.3;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        gap: toRem(10);
+        align-items: center;
+        list-style: none;
+        transition: color 0.3s;
+        &::marker {
+            display: none;
+        }
+        &::before {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            width: toRem(20);
+            height: toRem(20);
+            flex-shrink: 0;
+            transition: height 0.3s;
+            .spollers__item.active & {
+                height: toRem(2);
+            }
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $yellowColor-4;
+                &::before {
+                    color: $yellowColor-4;
+                    transition:
+                        color 0.3s,
+                        height 0.3s;
+                }
+            }
+        }
+    }
+
+    // .spollers__body
+
+    &__body {
+        padding-block: toRem(30);
+        @include adaptiveValue("padding-left", 30, 0);
+        @include adaptiveValue("padding-right", 40, 0);
+        color: $greyColor;
+        font-size: toRem(18);
+        line-height: 1.3;
+        max-width: toRem(452);
+    }
+}
+
+//===================================================================
+
+.article {
+    flex-basis: min(toRem(347), 100%);
+    flex-grow: 1;
+    @include adaptiveValue("padding-inline", 40, 0);
+    box-shadow: 0 toRem(20) toRem(95) 0 $boxShadow;
+    display: flex;
+    flex-direction: column;
+
+    // .article__img
+
+    &__img {
+        margin-top: toRem(-33);
+        aspect-ratio: 456 / 214;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &:not(:last-child) {
+            margin-bottom: toRem(30);
+        }
+    }
+
+    // .article__box
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+
+    // .article__mark
+
+    &__mark {
+        display: inline-block;
+        color: $markColor;
+        font-size: toRem(22);
+        letter-spacing: toRem(-0.5);
+        background-color: transparent;
+        &:not(:last-child) {
+            margin-bottom: toRem(30);
+        }
+    }
+
+    // .article__title
+
+    &__title {
+        font-size: toRem(22);
+        font-weight: 700;
+        line-height: 1.3;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 85, 30);
+        }
+    }
+
+    // .article__text
+
+    &__text {
+        padding: toRem(30) toRem(30) toRem(45) toRem(30);
+        color: $greyColor;
+        font-size: toRem(18);
+        background: $bgc-3;
+        backdrop-filter: blur(toRem(50));
+        margin-bottom: toRem(-36);
+        @media (max-width: toEm(450)) {
+            padding: toRem(30) toRem(15) toRem(30) toRem(15);
+        }
+    }
+}
+
+//===================================================================
+
+.card {
+    flex-basis: min(toRem(400), 100%);
+    border-radius: toRem(10);
+    border: toRem(1) solid $whiteColor-3;
+    background-color: $whiteColor;
+    box-shadow: 0 toRem(20) toRem(40) 0 $boxShadow-2;
+    padding: toRem(25);
+    flex-grow: 1;
+    // .card__title
+
+    &__title {
+        font-size: toRem(18);
+        font-weight: 700;
+        line-height: 1.3;
+        &:not(:last-child) {
+            margin-bottom: toRem(35);
+        }
+    }
+
+    // .card__text
+
+    &__text {
+        color: $greyColor;
+        font-size: toRem(18);
+    }
+}
