@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preload" href="./assets/fonts/Satoshi-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/Satoshi-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/Gambetta-LightItalic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/Chillax-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/Chillax-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Pricing</title>
+		<link rel="modulepreload" crossorigin href="./js/common.min.js?v=1792614815498">
+		<script type="module" crossorigin="" src="./js/main.min.js?v=1792614815498"></script>
+		<script type="module" crossorigin="" src="./js/blockhead.min.js?v=1792614815498"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/main.min.css?v=1792614815498">
+		<link rel="stylesheet" crossorigin="" href="./css/blockhead.min.css?v=1792614815498">
+		<link rel="stylesheet" crossorigin="" href="./css/pricing.min.css?v=1792614815498">
+		<link rel="stylesheet" crossorigin="" href="./css/cardstyle.min.css?v=1792614815498">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header data-fls-header="" data-fls-header-scroll="" data-fls-header-scroll-show="1000" class="header">
+				<div class="header__container">
+					<div class="header__body">
+						<a href="@index.html" class="header__link-logo">
+							<img src="./assets/img/logo.svg" alt="logo" class="header__img-logo">
+						</a>
+						<div class="header__menu menu">
+							<nav class="menu__body">
+								<ul class="menu__list">
+									<li class="menu__item">
+										<a href="services.html" class="menu__link">Services</a>
+									</li>
+									<li class="menu__item">
+										<a href="work.html" class="menu__link">Work</a>
+									</li>
+									<li class="menu__item">
+										<a href="about.html" class="menu__link">About</a>
+									</li>
+									<li class="menu__item">
+										<a href="blog.html" class="menu__link">Blog</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<!--
+<fetch url="@components/layout/menu/menu.json">
+<each loop='item in response'>
+</each>
+</fetch>
+-->
+						<a data-fls-button="" href="#" class="button button--light">Let’s talk</a>
+						<button type="button" data-fls-menu="" class="icon-menu">
+							<span></span>
+						</button>
+					</div>
+				</div>
+			</header>
+			<main data-fls-pricing="" class="page page--pricing">
+				<section class="page__pricing pricing-page">
+					<div class="pricing-page__container">
+						<div data-fls-watcher="" data-fls-watcher-once="" data-fls-blockhead="" class="pricing-page__blockhead blockhead blockhead--gap-16">
+							<span class="blockhead__label">Pricing</span>
+							<h1 class="blockhead__title blockhead__title--size-80">
+								Experience the Power of
+								<span>Premium Webdesign</span>
+							</h1>
+							<div class="blockhead__text">
+								<p>
+									Choose a package that suits your needs and budget. Transparent pricing with no hidden fees.
+								</p>
+							</div>
+						</div>
+						<div class="pricing-page__cards cards-pricing">
+							<ul class="cards-pricing__list">
+								<li data-fls-watcher="" data-fls-watcher-once="" data-fls-cardstyle="" class="cards-pricing__item">
+									<div class="cards-pricing__name">Lite</div>
+									<div class="cards-pricing__value">$3900.00</div>
+									<div class="cards-pricing__text">
+										<p>
+											Affordable web design package with a custom design, CMS integration, and responsive
+                                design for small businesses and startups.
+										</p>
+									</div>
+									<ul class="cards-pricing__services services-list">
+										<li class="services-list__item">Concept</li>
+										<li class="services-list__item">Strategy</li>
+										<li class="services-list__item">Webdesign</li>
+										<li class="services-list__item">Prototype</li>
+									</ul>
+									<a data-fls-button="" href="#" class="cards-pricing__button button button--light">Get Started</a>
+								</li>
+								<li data-fls-watcher="" data-fls-watcher-once="" data-fls-cardstyle="" class="cards-pricing__item">
+									<div class="cards-pricing__label">Popular</div>
+									<div class="cards-pricing__name">Premium</div>
+									<div class="cards-pricing__value">$6900.00</div>
+									<div class="cards-pricing__text">
+										<p>
+											Comprehensive web design package with UX/UI design, interactive prototype, Framer
+                                development, and CMS integration for medium businesses.
+										</p>
+									</div>
+									<ul class="cards-pricing__services services-list">
+										<li class="services-list__item">Concept</li>
+										<li class="services-list__item">Strategy</li>
+										<li class="services-list__item">Webdesign</li>
+										<li class="services-list__item">Development</li>
+									</ul>
+									<a data-fls-button="" href="#" class="cards-pricing__button button button--light">Get Started</a>
+								</li>
+								<li data-fls-watcher="" data-fls-watcher-once="" data-fls-cardstyle="" class="cards-pricing__item">
+									<div class="cards-pricing__name">Gold</div>
+									<div class="cards-pricing__value">$9900.00</div>
+									<div class="cards-pricing__text">
+										<p>
+											Elite web design package with SEO optimization, research, and SEO support for businesses
+                                looking to dominate their market.
+										</p>
+									</div>
+									<ul class="cards-pricing__services services-list">
+										<li class="services-list__item">Webdesign</li>
+										<li class="services-list__item">Development</li>
+										<li class="services-list__item">Content</li>
+										<li class="services-list__item">SEO</li>
+									</ul>
+									<a data-fls-button="" href="#" class="cards-pricing__button button button--light">Get Started</a>
+								</li>
+							</ul>
+						</div>
+						<div class="pricing-page__body body-pricing">
+							<div data-fls-watcher="" data-fls-watcher-once="" class="body-pricing__head">
+								<div class="body-pricing__label">FAQ</div>
+								<div class="body-pricing__title">
+									Common
+									<span>Questions</span>
+								</div>
+							</div>
+							<div data-fls-spollers="" data-fls-spollers-one="" class="body-pricing__spollers spollers">
+								<details data-fls-watcher="" data-fls-watcher-once="" class="spollers__item">
+									<summary class="spollers__title">
+										What is the typical turnaround time
+                            for a website project?
+									</summary>
+									<div class="spollers__body">
+										<p>
+											The timeline for a website project can vary depending on the
+                                complexity of the project and the specific requirements of the client. However, we work
+                                closely with our clients to establish a timeline that works for everyone and strive to
+                                deliver projects in a timely and efficient manner.
+										</p>
+									</div>
+								</details>
+								<details data-fls-watcher="" data-fls-watcher-once="" class="spollers__item">
+									<summary class="spollers__title">
+										Can you help with website
+                            maintenance and updates after the
+                            project is completed?
+									</summary>
+									<div class="spollers__body">
+										<p>
+											The timeline for a website project can vary depending on the
+                                complexity of the project and the specific requirements of the client. However, we work
+                                closely with our clients to establish a timeline that works for everyone and strive to
+                                deliver projects in a timely and efficient manner.
+										</p>
+									</div>
+								</details>
+								<details data-fls-watcher="" data-fls-watcher-once="" class="spollers__item">
+									<summary class="spollers__title">
+										How do you ensure that my website
+                            will be optimized for search
+                            engines?
+									</summary>
+									<div class="spollers__body">
+										<p>
+											The timeline for a website project can vary depending on the
+                                complexity of the project and the specific requirements of the client. However, we work
+                                closely with our clients to establish a timeline that works for everyone and strive to
+                                deliver projects in a timely and efficient manner.
+										</p>
+									</div>
+								</details>
+								<details data-fls-watcher="" data-fls-watcher-once="" class="spollers__item">
+									<summary class="spollers__title">
+										What is your process for website
+                            design and development?
+									</summary>
+									<div class="spollers__body">
+										<p>
+											The timeline for a website project can vary depending on the
+                                complexity of the project and the specific requirements of the client. However, we work
+                                closely with our clients to establish a timeline that works for everyone and strive to
+                                deliver projects in a timely and efficient manner.
+										</p>
+									</div>
+								</details>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<aside data-fls-letstalk="" class="letstalk">
+				<div data-fls-marquee="" data-fls-marquee-speed="100" class="letstalk__row row-letstalk">
+					<div class="row-letstalk__item">Let’s talk</div>
+					<div class="row-letstalk__item">+++</div>
+				</div>
+				<div class="letstalk__container">
+					<div data-fls-watcher="" data-fls-watcher-once="" data-fls-blockhead="" class="letstalk__blockhead blockhead">
+						<span class="blockhead__label">Project in mind?</span>
+						<h2 class="blockhead__title">
+							Let’s make your
+							<span>Website shine</span>
+						</h2>
+						<div class="blockhead__text blockhead__text--width-500">
+							<p>Premium web design, webflow, and SEO services to help your business stand out.</p>
+						</div>
+						<a data-fls-button="" href="#" class="letstalk__button button button--light button--icon button--icon-arrow button--arrow-ru">Get in
+				touch</a>
+					</div>
+				</div>
+			</aside>
+			<footer data-fls-footer="" class="footer">
+				<div class="footer__container">
+					<div class="footer__body">
+						<div class="footer__column">
+							<a data-fls-scrollto=".page__hero" href="#" class="footer__logo">
+								<img src="./assets/img/logo.svg" alt="logo-image">
+							</a>
+							<ul data-fls-social="" class="footer__social social social--column">
+								<li class="social__item">
+									<a href="#" target="_blank" class="social__link social__link--text social__link--icon-instagram">instagram</a>
+								</li>
+								<li class="social__item">
+									<a href="#" target="_blank" class="social__link social__link--text social__link--icon-twitter">twitter</a>
+								</li>
+								<li class="social__item">
+									<a href="#" target="_blank" class="social__link social__link--text social__link--icon-dribbble">dribbble</a>
+								</li>
+								<li class="social__item">
+									<a href="#" target="_blank" class="social__link social__link--text social__link--icon-behance">behance</a>
+								</li>
+							</ul>
+						</div>
+						<div data-fls-spollers="500" class="footer__menus menus-footer">
+							<details class="menus-footer__details">
+								<summary>
+									<h5 class="menus-footer__title">Pages</h5>
+								</summary>
+								<ul class="menus-footer__list">
+									<li class="menus-footer__item">
+										<a href="#" target="_blank" class="menus-footer__link">Home</a>
+									</li>
+									<li class="menus-footer__item">
+										<a href="#" target="_blank" class="menus-footer__link">Services</a>
+									</li>
+									<li class="menus-footer__item">
+										<a href="#" target="_blank" class="menus-footer__link">About</a>
+									</li>
+									<li class="menus-footer__item">
+										<a href="#" target="_blank" class="menus-footer__link">Contact</a>
+									</li>
+									<li class="menus-footer__item">
+										<a data-fls-button="" href="#" class="menus-footer__button button button--light button--icon button--icon-arrow button--arrow-ru">More
+								Templates</a>
+									</li>
+								</ul>
+							</details>
+						</div>
+						<div data-fls-spollers="500" class="footer__menus menus-footer">
+							<details class="menus-footer__details">
+								<summary>
+									<h5 class="menus-footer__title">CMS</h5>
+								</summary>
+								<ul class="menus-footer__list">
+									<li class="menus-footer__item">
+										<a href="#" target="_blank" class="menus-footer__link">Work</a>
+									</li>
+									<li class="menus-footer__item">
+										<a href="#" target="_blank" class="menus-footer__link">Work
+								Single</a>
+									</li>
+									<li class="menus-footer__item">
+										<a href="#" target="_blank" class="menus-footer__link">Blog</a>
+									</li>
+									<li class="menus-footer__item">
+										<a href="#" target="_blank" class="menus-footer__link">Blog
+								Post</a>
+									</li>
+								</ul>
+							</details>
+						</div>
+						<div data-fls-spollers="500" class="footer__menus menus-footer">
+							<details class="menus-footer__details">
+								<summary>
+									<h5 class="menus-footer__title">Utility Pages</h5>
+								</summary>
+								<ul class="menus-footer__list">
+									<li class="menus-footer__item">
+										<a href="#" target="_blank" class="menus-footer__link">404 Error
+								Page</a>
+									</li>
+									<li class="menus-footer__item">
+										<a href="#" target="_blank" class="menus-footer__link">Password
+								Protected</a>
+									</li>
+									<li class="menus-footer__item">
+										<a href="#" target="_blank" class="menus-footer__link">Styleguide</a>
+									</li>
+									<li class="menus-footer__item">
+										<a href="#" target="_blank" class="menus-footer__link">Licensing</a>
+									</li>
+									<li class="menus-footer__item">
+										<a href="#" target="_blank" class="menus-footer__link">Changelog</a>
+									</li>
+								</ul>
+							</details>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<a href="#" class="footer__copy">© 2022 Made by Pawel Gola. Powered by Framer..</a>
+						<a data-fls-scrollto="main" data-fls-button="" href="#" class="footer__button button button--text button--text-big button--text-big-reverse button--icon-arrow button--arrow-u">To
+				Top</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
